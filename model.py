@@ -40,18 +40,18 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 from sklearn.base import BaseEstimator
 from sklearn.model_selection import GridSearchCV
 #switcher class for different estimators
-#class my_classifier(BaseEstimator,):
-#    def __init__(self, estimator=None):
-#        self.estimator = estimator
-#    def fit(self, X, y=None):
-#        self.estimator.fit(X,y)
-#        return self
-#    def predict(self, X, y=None):
-#        return self.estimator.predict(X,y)
-#    def predict_proba(self, X):
-#        return self.estimator.predict_proba(X)
-#    def score(self, X, y):
-#        return self.estimator.score(X, y)
+class my_classifier(BaseEstimator,):
+    def __init__(self, estimator=None):
+        self.estimator = estimator
+    def fit(self, X, y=None):
+        self.estimator.fit(X,y)
+        return self
+    def predict(self, X, y=None):
+        return self.estimator.predict(X,y)
+    def predict_proba(self, X):
+        return self.estimator.predict_proba(X)
+    def score(self, X, y):
+        return self.estimator.score(X, y)
 #define estimators with parameters. (We have not taken other parameters to keep it simple)
 from spamClassify import my_classifier
 parameters = [
