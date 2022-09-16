@@ -8,7 +8,7 @@ from sklearn.feature_extraction.text import ENGLISH_STOP_WORDS
 
 app = FastAPI()
 
-filename = 'spam_model'
+filename = 'spam_model2'
 model = load(filename)
 
 
