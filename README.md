@@ -1,1 +1,1 @@
-# spam_ham_api
+# spam_ham_api for spam detection in SMS
